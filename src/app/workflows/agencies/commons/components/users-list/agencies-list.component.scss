@@ -1,0 +1,207 @@
+// @import "~scss/abstracts/_variables.scss";
+// @import "~scss/components/_table.scss";
+
+// .border-active {
+//   border-left-style: solid;
+//   border-left-color: $repsol-mossy-green;
+//   border-left-width: 0.35rem;
+// }
+
+// .border-inactive {
+//   border-left-style: solid;
+//   border-left-color: $repsol-grey;
+//   border-left-width: 0.35rem;
+// }
+
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 100%;
+//   }
+// }
+
+// .dropdownStateMasivo {
+//   background: rgba(255, 255, 255, 0.3);
+//   font-size: 14px;
+//   font-weight: 600;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: normal;
+//   letter-spacing: normal;
+//   text-align: center;
+//   color: $repsol-soft-white;
+//   font-family: Repsol-SemiBold;
+//   height: 1.97rem;
+// }
+
+// .no-info-tittle {
+//   font-family: RepsolViet-Bold;
+//   font-size: 21px;
+//   font-weight: bold;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: 2;
+//   letter-spacing: -0.3px;
+//   text-align: center;
+//   color: #4a4a4a;
+// }
+
+// .no-info-desc {
+//   font-family: RepsolViet-Regular;
+//   font-size: 14px;
+//   font-weight: normal;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: 1.25;
+//   letter-spacing: -0.2px;
+//   text-align: center;
+//   color: #4a4a4a;
+// }
+
+// .img-responsive {
+//   padding-top: 1.5rem !important;
+//   max-width: 25rem;
+//   width: 75%;
+// }
+// .state-table-active{
+//   border-color: $repsol-mossy-green;
+// }
+
+// .disabled-icon,
+// .enabled-icon {
+//   cursor: pointer;
+//   color: $repsol-grey;
+//   &:hover {
+//     color: $repsol-pumpkin;
+//   }
+// }
+// .removed-icon{
+//   color: $repsol-pale-grey;
+//   opacity: 0.5;
+// }
+// .card-action-icon {
+//   cursor: pointer;
+//   font-size: 17px;
+//   color: $repsol-grey;
+// }
+// .card-action-icon:hover{
+//   color: $repsol-pumpkin;
+// }
+
+// .gray {
+//   color: #878582;
+// }
+
+// .min-height-30 {
+//   min-height: 30px !important;
+// }
+// .no-padding {
+//   padding: 0 !important;
+// }
+// .font-size-12 {
+//   font-size: 12px;
+// }
+// .fa, .fas {
+//   font-size: 1.3em;
+//   padding: 0 10px;
+//   transition: .25s  ease-in;
+// }
+// .fa:hover,
+// .fas:hover,
+// .fa:active,
+// .fas:active,
+// .fa.active,
+// .fas.active {
+//   color: #EA8819;
+// }
+// .line-through {
+//   text-decoration: line-through;
+// }
+// .example-container {
+//   display: flex;
+//   flex-direction: column;
+//   min-width: 1000px;
+//   margin: 10px 2px 0 2px;
+// }
+// .example-header {
+//   border-radius: 6px;
+//   min-height: 40px;
+//   padding: 8px 24px 0;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 24px;
+//   box-shadow: 0 3px 8px 0 rgba(110, 98, 89, 0.09);
+//   box-sizing: border-box;
+//   margin-bottom: 15px;
+//   background-color: white;
+// }
+// .fa-link {
+//   cursor: pointer;
+// }
+// .normal {
+//   font-weight: normal !important;
+// }
+
+// .group-actions {
+//   box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.36);
+//   background-color: $repsol-navy;
+//   position: fixed;
+//   bottom: 0;
+//   width: 100%;
+//   width: -webkit-calc(100% - 105px);
+//   width: -moz-calc(100% - 105px);
+//   width: calc(100% - 105px);
+// }
+
+// .cardRequestIcon{
+//   cursor: pointer;
+//   color: $repsol-grey;
+//   font-size: 34px;
+// }
+// .cardRequestIcon:hover{
+//   color: $repsol-pumpkin;
+// }
+
+// .boxIcon {
+//   padding: 4px;
+//   height: 36px;
+//   border-radius: 6px;
+//   background-color: #f5f3f0;
+//   cursor: pointer;
+//   margin-top:0.5rem;
+// }
+
+// .contentImgAndLabel {
+//   text-align: center;
+// }
+
+// .imgBox {
+//   width: 20px;
+//   height: 20px;
+//   object-fit: contain;
+// }
+
+// .labelBox {
+//   width: 80px;
+//   height: 15px;
+//   font-family: RepsolViet-Regular;
+//   font-size: 12px;
+//   font-weight: 600;
+//   font-style: normal;
+//   font-stretch: normal;
+//   line-height: normal;
+//   letter-spacing: normal;
+//   color: $repsol-greyish-brown;
+// }
+
+// .space-border{
+//   margin-left: 5.5%;
+//   margin-right: 5.5%;
+// }
+// .close-group-actions{
+//   // Small devices (landscape phones, 576px and up)
+//   @media (min-width: 576px) {
+//     position: absolute;
+//     right: 16px;
+//     width: 30px;
+//   }
+// }
