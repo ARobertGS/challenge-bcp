@@ -9,19 +9,14 @@ const routes: Routes = [
     children: [
       {
         path: agenciesModuleRoutes.agencies.path,
-        loadChildren: () => import('./views/user/agencies-view.module').
-        then(m => m.UserModule),
+        loadChildren: () => import('./views/agencies-view/agencies-view.module').
+        then(m => m.AgenciesModule),
       },
-      // {
-      //   path: agenciesRoutes.createUser.path,
-      //   canActivate: [AgenciesPageCreateUserGuard],
-      //   loadChildren: agenciesRoutes.createUser.loadChildren,
-      // },
-      // {
-      //   path: agenciesRoutes.updateUser.path,
-      //   canActivate: [AgenciesPageEditUserGuard],
-      //   loadChildren: agenciesRoutes.updateUser.loadChildren,
-      // },
+      {
+        path: agenciesModuleRoutes.agenciesDetail.path,
+        loadChildren: () => import('./views/agencies-detail-view/agencies-detail-view.module').
+        then(m => m.AgenciesDetailModule),
+      },
     ],
   },
 ];

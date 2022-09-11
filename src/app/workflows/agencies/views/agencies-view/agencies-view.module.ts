@@ -17,4 +17,4 @@ import { agenciesViewRouterModule } from './agencies-view.routing';
     AgenciesViewComponent,
   ],
 })
-export class UserModule { }
+export class AgenciesModule { }

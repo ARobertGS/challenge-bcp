@@ -16,6 +16,8 @@ import { LoadingModule } from './commons/components/ui/loading/loading.module';
 import { LoadingService } from './commons/services/subjects/loading.service';
 import { ComponentCommonModule } from './commons/components/components.common.module';
 import { AngularViewComponentsModule } from './commons/angular-view-components/angular-view-components.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WelcomeModule } from './welcome/welcome.module';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { AngularViewComponentsModule } from './commons/angular-view-components/a
     // ServicesModule.forRoot(),
     ServiceCommonModule,
     LoadingModule,
+    NgbModule,
+    WelcomeModule,
   ],
   providers: [
     LoadingService,

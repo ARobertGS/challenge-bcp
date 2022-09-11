@@ -1,4 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
+import { redirectByPathToAgenciesModuleAgenciesDetail } from '../../constants/agencies-routes';
 import { IAgenciesListUI, IAgencyUI } from '../../model/ui/agencies-list.ui.interface';
 import { HttpAgenciesListService } from '../../services/http/agencies-list.service';
 
@@ -14,6 +16,7 @@ export class AgenciesListComponent implements OnInit, OnDestroy {
 
   constructor(
     private httpAgenciesListService: HttpAgenciesListService,
+    private router: Router,
   ) {
     
   }
@@ -41,5 +44,8 @@ export class AgenciesListComponent implements OnInit, OnDestroy {
     );
   }
 
+  navigateToDetail(): void {
+    this.router.navigateByUrl(redirectByPathToAgenciesModuleAgenciesDetail);
+  }
   
 }
