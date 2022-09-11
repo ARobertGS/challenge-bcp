@@ -3,7 +3,7 @@ import { Subscription } from 'rxjs';
 import { LoadingService } from '../../../services/subjects/loading.service';
 
 @Component({
-  selector: 'rp-loading',
+  selector: 'bcp-loading',
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss'],
 })

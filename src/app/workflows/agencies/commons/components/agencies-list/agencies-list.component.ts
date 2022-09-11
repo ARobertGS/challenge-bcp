@@ -47,5 +47,9 @@ export class AgenciesListComponent implements OnInit, OnDestroy {
   editAgency(agency: IAgencyUI): void {
     this.router.navigate([redirectByPathToAgenciesModuleAgenciesDetail, agency]);
   }
+
+  addAgency(): void {
+    this.router.navigate([redirectByPathToAgenciesModuleAgenciesDetail]);
+  }
   
 }

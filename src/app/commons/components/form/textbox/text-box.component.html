@@ -1,0 +1,28 @@
+<label class="form-label cls-label" *ngIf="label">{{label}}</label>
+<!-- <div class="input-group"> -->
+  <!-- <div class="input-symbol-prepend" *ngIf="symbol">
+    <span class="input-symbol rs-semibold-12 color-repsol-pumpkin">{{symbol}}</span>
+  </div> -->
+  <input class="form-control cls-input-text"
+  type="text"
+  [ngClass]="{'error': error}"
+  [disabled]="disabled"
+  [ngModel]="currentValue"
+  (ngModelChange)="valueChange($event)"
+  [maxlength]="maxlength"
+  [placeholder]="placeholder"
+  numberOnly
+  [numberOnlyActive]="typeTextBox.ONLY_NUMBER === type"
+  alfanumberOnlyCustom
+  [alfanumberOnlyCustomActive]="typeTextBox.ALPHANUMERIC_WITH_SPACE_AND_DASH === type"
+  decimalOnly
+  [decimalOnlyActive]="typeTextBox.ONLY_DECIMAL === type"
+  (blur)="blurEvent($event)"
+  (input)="inputEvent($event)"/>
+<!-- </div> -->
+
+<div *ngIf="error" class="style-for-custom-validation">
+  <span class="p-2 text-left">
+    {{error}}
+  </span>
+</div>

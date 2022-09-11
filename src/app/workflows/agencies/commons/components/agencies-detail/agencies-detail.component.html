@@ -8,34 +8,96 @@
             </div>
             <div id="pnlBody" class="cls-body">
                 <section class="pt-0 pb-0">
+                <form [formGroup]="agenciesDetailPresenter.agenciesDetailForm">
                     <div class="row cls-row-detail">
-                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <label for="txtNameAgency" class="form-label cls-label">Nombre de Agencia</label>
-                            <input type="text" class="form-control cls-input-text" id="txtNameAgency" name="txtNameAgency" placeholder="">                                                              
+                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">    
+                            <bcp-text-box
+                                name="agency"
+                                [type]="eTypeTextbox.ALPHANUMERIC_WITH_SPACE_AND_DASH"
+                                label="Nombre de la Agencia"
+                                [maxlength]="'20'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.agencyControl.errors | showerror:agencyControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="agencyControl">
+                            </bcp-text-box>                                                           
+                        </div>
+                    </div>
+                    <div class="row cls-row-detail">
+                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">
+                            <bcp-text-box
+                                name="district"
+                                [type]="eTypeTextbox.ALPHANUMERIC_WITH_SPACE_AND_DASH"
+                                label="Distrito"
+                                [maxlength]="'500'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.districtControl.errors | showerror:districtControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="districtControl">
+                            </bcp-text-box>                                                            
                         </div>
                     </div>
                     <div class="row cls-row-detail">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <label for="txtAddress" class="form-label cls-label">Direccion</label>
-                            <input type="text" class="form-control cls-input-text" id="txtAddress" name="txtAddress" placeholder="">                                                              
+                            <bcp-text-box
+                                name="province"
+                                [type]="eTypeTextbox.ALPHANUMERIC_WITH_SPACE_AND_DASH"
+                                label="Provincia"
+                                [maxlength]="'500'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.provinceControl.errors | showerror:provinceControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="provinceControl">
+                            </bcp-text-box>                                                              
                         </div>
                     </div>
                     <div class="row cls-row-detail">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <label for="txtDistrict" class="form-label cls-label">Distrito</label>
-                            <input type="text" class="form-control cls-input-text" id="txtDistrict" name="txtDistrict" placeholder="">                                                              
+                            <bcp-text-box
+                                name="department"
+                                [type]="eTypeTextbox.ALPHANUMERIC_WITH_SPACE_AND_DASH"
+                                label="Departamento"
+                                [maxlength]="'500'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.departmentControl.errors | showerror:departmentControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="departmentControl">
+                            </bcp-text-box>                                                              
                         </div>
                     </div>
                     <div class="row cls-row-detail">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <label for="txtLatitude" class="form-label cls-label">Latitud</label>
-                            <input type="text" class="form-control cls-input-text" id="txtLatitude" name="txtLatitude" placeholder="">                                                              
+                            <bcp-text-box
+                                name="address"
+                                [type]="eTypeTextbox.ALPHANUMERIC_WITH_SPACE_AND_DASH"
+                                label="Dirección"
+                                [maxlength]="'500'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.addressControl.errors | showerror:addressControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="addressControl">
+                            </bcp-text-box>                                                              
                         </div>
                     </div>
                     <div class="row cls-row-detail">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <label for="txtLongitude" class="form-label cls-label">Longitud</label>
-                            <input type="text" class="form-control cls-input-text" id="txtLongitude" name="txtLongitude" placeholder="">                                                              
+                            <bcp-text-box
+                                name="lat"
+                                [type]="eTypeTextbox.ONLY_DECIMAL"
+                                label="Latitud"
+                                [maxlength]="'20'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.latControl.errors | showerror:latControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="latControl">
+                            </bcp-text-box>                                                           
+                        </div>
+                    </div>
+                    <div class="row cls-row-detail">
+                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
+                            <bcp-text-box
+                                name="lon"
+                                [type]="eTypeTextbox.ONLY_DECIMAL"
+                                label="Longitud"
+                                [maxlength]="'20'"
+                                [placeholder]="''"
+                                [error]="agenciesDetailPresenter.lonControl.errors | showerror:lonControlMapError:agenciesDetailPresenter.showError"
+                                formControlName="lonControl">
+                            </bcp-text-box>                                                              
                         </div>
                     </div>
 
@@ -55,14 +117,13 @@
                     
                     <div class="row cls-row-detail" style="text-align: center;">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <button id="btnUpdate" class="btn btn-primary" type="submit">Actualizar</button>                                                         -->
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
-                            <button id="btnBack" class="btn btn-primary" type="button" (click)="navigateToAgencies()">Volver</button>                                                            
+                            <button *ngIf="isEditMode" id="btnUpdate" class="btn btn-primary m-2" type="submit" (click)="validateEditAgency()">Actualizar</button>
+                            <button *ngIf="!isEditMode" id="btnAdd" class="btn btn-primary m-2" type="submit" (click)="validateEditAgency()">Registrar</button>
+                            <button id="btnBack" class="btn btn-primary m-2" type="button" (click)="navigateToAgencies()">Regresar</button> 
                         </div>
                     </div>
-                   
-                 
+                
+                </form>
                 </section>                 
             </div>            
         </div>

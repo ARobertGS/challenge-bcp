@@ -1,9 +1,12 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { ETypeTextbox } from 'src/app/commons/components/form/textbox/text-box.component';
 import { redirectByPathToAgenciesModuleAgencies } from '../../constants/agencies-routes';
 import { IAgencyUI } from '../../model/ui/agencies-list.ui.interface';
 import { IAgencyDetailUI } from '../../model/ui/agency-detail.ui.interface';
+import { addressControlMapError, agencyControlMapError, departmentControlMapError, districtControlMapError, latControlMapError, lonControlMapError, provinceControlMapError } from './agencies-detail.message-errors';
+import { AgenciesDetailPresenter } from './agencies-detail.presenter';
 
 
 @Component({
@@ -12,6 +15,17 @@ import { IAgencyDetailUI } from '../../model/ui/agency-detail.ui.interface';
   styleUrls: ['./agencies-detail.component.scss'],
 })
 export class AgenciesDetailComponent implements OnInit, OnDestroy {
+
+  isEditMode: boolean = false;
+  eTypeTextbox = ETypeTextbox;
+
+  agencyControlMapError = agencyControlMapError;
+  districtControlMapError = districtControlMapError;
+  provinceControlMapError = provinceControlMapError;
+  departmentControlMapError = departmentControlMapError;
+  addressControlMapError = addressControlMapError;
+  latControlMapError = latControlMapError;
+  lonControlMapError = lonControlMapError;
 
   agency: IAgencyDetailUI = {
     agency:'',
@@ -31,33 +45,26 @@ export class AgenciesDetailComponent implements OnInit, OnDestroy {
       },
     }
   };
-  // = {
-  //   agency: 'agency',
-  //   district: 'district',
-  //   province: 'province',
-  //   department: 'department',
-  //   address: 'address',
-  //   lat: -77.01232817,
-  //   lon: -12.0046896
-  // };
-  // position = {
-  //   lat: -34.681,
-  //   lng: -58.371
-  // };
-
-  // label = {
-  //   color: 'red',
-  //   text: 'marcador'
-  // };
 
   private routeParamsSubs = new Subscription();
 
   constructor(
+    public agenciesDetailPresenter: AgenciesDetailPresenter,
     private router: Router,
     private routeParams: ActivatedRoute,
   ) {
     this.routeParamsSubs = this.routeParams.params.subscribe((params) => {
       if (params['agency']) {
+        this.isEditMode = true;
+        this.agenciesDetailPresenter.disabledAgencyControl();
+        this.agenciesDetailPresenter.agencyControl.setValue(params['agency']);
+        this.agenciesDetailPresenter.districtControl.setValue(params['district']);
+        this.agenciesDetailPresenter.provinceControl.setValue(params['province']);
+        this.agenciesDetailPresenter.departmentControl.setValue(params['department']);
+        this.agenciesDetailPresenter.addressControl.setValue(params['address']);
+        this.agenciesDetailPresenter.latControl.setValue(params['lat']);
+        this.agenciesDetailPresenter.lonControl.setValue(params['lon']);
+
         this.agency = {
           agency: params['agency'],
           district: params['district'],
@@ -78,6 +85,9 @@ export class AgenciesDetailComponent implements OnInit, OnDestroy {
         };
         console.log(this.agency);
       }
+      else {
+        this.agenciesDetailPresenter.enabledAgencyControl();
+      }
     });
   }
 
@@ -86,9 +96,29 @@ export class AgenciesDetailComponent implements OnInit, OnDestroy {
 
   
   ngOnDestroy(): void {
+    this.agenciesDetailPresenter.resetForm();
     this.routeParamsSubs.unsubscribe();
   }
 
+  validateEditAgency() {
+    if (this.agenciesDetailPresenter.agenciesDetailForm.valid) {
+      const agency: IAgencyUI = {
+        agency: this.agenciesDetailPresenter.agencyControl.value || '',
+        district: this.agenciesDetailPresenter.districtControl.value || '',
+        province: this.agenciesDetailPresenter.provinceControl.value || '',
+        department: this.agenciesDetailPresenter.departmentControl.value || '',
+        address: this.agenciesDetailPresenter.addressControl.value || '',
+        lat: this.agenciesDetailPresenter.latControl.value ? 
+              Number.parseFloat(this.agenciesDetailPresenter.latControl.value) : 0,
+        lon: this.agenciesDetailPresenter.lonControl.value ?
+              Number.parseFloat(this.agenciesDetailPresenter.lonControl.value) : 0,
+      };
+      // Grabar en localStorage
+      console.log(agency);
+    } else {
+      this.agenciesDetailPresenter.showError = true;
+    }
+  }
 
   navigateToAgencies(): void {
     this.router.navigateByUrl(redirectByPathToAgenciesModuleAgencies);
