@@ -29,7 +29,7 @@
           <div id="pnlBody" class="cls-body">
               <section class="pt-0 pb-0">
 
-                <div (click) = "navigateToDetail()" class="row cls-row" *ngFor="let agency of agenciesList; let index = index;">
+                <div (click) = "editAgency(agency)" class="row cls-row" *ngFor="let agency of agenciesList; let index = index;">
                     <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field">
                         <img  src="assets/img/icon_profile.jfif" title="Buscar" class="img-responsive img-profile"/>
                         <div class="cls-text-contanier">

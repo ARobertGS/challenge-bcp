@@ -36,7 +36,7 @@ export class AgenciesListComponent implements OnInit, OnDestroy {
         this.agenciesList = result.agenciesList;
       },
       error => {
-        console.log('error on gencies-list.component - getAgencies', [error]);
+        console.log('error on agencies-list.component - getAgencies', [error]);
       },
       () => {
         //Mostrar loading
@@ -44,8 +44,8 @@ export class AgenciesListComponent implements OnInit, OnDestroy {
     );
   }
 
-  navigateToDetail(): void {
-    this.router.navigateByUrl(redirectByPathToAgenciesModuleAgenciesDetail);
+  editAgency(agency: IAgencyUI): void {
+    this.router.navigate([redirectByPathToAgenciesModuleAgenciesDetail, agency]);
   }
   
 }

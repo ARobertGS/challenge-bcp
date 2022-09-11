@@ -15,7 +15,7 @@ export const agenciesModuleRoutes: IClientRoutes = {
     path: 'agencies',
   },
   agenciesDetail: {
-    path: 'agencies-detail',
+    path: 'agencies-detail:agency',
   },
 };
 

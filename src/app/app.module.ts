@@ -33,20 +33,12 @@ import { WelcomeModule } from './welcome/welcome.module';
     HomeModule,
     GuardModule,
     ComponentCommonModule,
-    // ToastModule.forRoot(),
-    // RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
-    // NgbModule.forRoot(),
-    // EvLoggerModule.forRoot({
-    //   level: LoggerLevels.TRACE,
-    //   serverLogLevel: LoggerLevels.OFF,
-    // }),
     AngularViewComponentsModule,
-    // Ng4LoadingSpinnerModule.forRoot(),
-    // ServicesModule.forRoot(),
     ServiceCommonModule,
     LoadingModule,
     NgbModule,
     WelcomeModule,
+    
   ],
   providers: [
     LoadingService,
