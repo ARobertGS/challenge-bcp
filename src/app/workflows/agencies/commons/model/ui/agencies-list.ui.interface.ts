@@ -1,4 +1,5 @@
 export interface IAgencyUI {
+  agencyId: number;
   agency: string;
   district: string;
   province: string;

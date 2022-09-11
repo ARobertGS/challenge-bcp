@@ -1,4 +1,4 @@
-import { Component, ViewContainerRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   templateUrl: './agencies.component.html',
@@ -6,12 +6,10 @@ import { Component, ViewContainerRef, OnInit } from '@angular/core';
 export class AgenciesComponent implements OnInit {
 
   constructor(
-    private vcr: ViewContainerRef,
   ) { 
     console.log('agencies component')
   }
 
   ngOnInit(): void {
-    // this.messageRepsol.init(this.vcr);
   }
 }

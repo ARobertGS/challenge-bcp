@@ -30,15 +30,16 @@ export class HttpAgenciesListService {
           let agenciesList: IAgencyUI[] = [];
 
           if (response.data) {
-            agenciesList = response.data.map(agencie => {
+            agenciesList = response.data.map(agency => {
               return {
-                agency : agencie.agencia,
-                district: agencie.distrito,
-                province: agencie.provincia,
-                department: agencie.departamento,
-                address: agencie.direccion,
-                lat: agencie.lat,
-                lon: agencie.lon,
+                agencyId: agency.agencyId,
+                agency : agency.agencia,
+                district: agency.distrito,
+                province: agency.provincia,
+                department: agency.departamento,
+                address: agency.direccion,
+                lat: agency.lat,
+                lon: agency.lon,
               };
             });
           }

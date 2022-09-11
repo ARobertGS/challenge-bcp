@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'rp-home-header',
+  selector: 'bcp-home-header',
   templateUrl: './home-header.component.html',
   styleUrls: ['./home-header.component.scss'],
 })

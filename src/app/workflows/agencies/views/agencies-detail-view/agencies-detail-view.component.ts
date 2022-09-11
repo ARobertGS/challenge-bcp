@@ -8,7 +8,7 @@ export class AgenciesDetailViewComponent implements OnInit, OnDestroy {
 
   constructor(
   ) {
-    console.log('agencies deyail view component');
+    console.log('agencies detail view component');
   }
 
   ngOnInit() {
