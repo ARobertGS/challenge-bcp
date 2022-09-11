@@ -31,7 +31,7 @@
 
                 <div (click) = "editAgency(agency)" class="row cls-row" *ngFor="let agency of agenciesList; let index = index;">
                     <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field">
-                        <img  src="assets/img/icon_profile.jfif" title="Buscar" class="img-responsive img-profile"/>
+                        <img [src]="agency.icon" title="Buscar" class="img-responsive img-profile"/>
                         <div class="cls-text-contanier">
                            <p class="cls-text"><span class="cls-title">{{agency.agency}}</span></p> 
                            <p class="cls-text"><span class="cls-subtitle">{{agency.department}}</span></p> 

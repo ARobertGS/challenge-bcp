@@ -40,6 +40,7 @@ export class HttpAgenciesListService {
                 address: agency.direccion,
                 lat: agency.lat,
                 lon: agency.lon,
+                icon: 'assets/img/icon_profile.jfif',
               };
             });
           }
