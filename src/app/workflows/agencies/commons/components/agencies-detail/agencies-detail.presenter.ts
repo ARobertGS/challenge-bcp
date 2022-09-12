@@ -31,6 +31,8 @@ export class AgenciesDetailPresenter {
   resetForm(): void {
     this.agenciesDetailForm.reset();
     this.agencyControl.enable();
+    this.disabledLatControl();
+    this.disabledLonControl();
     this.showError = false;
   }
 
@@ -40,6 +42,14 @@ export class AgenciesDetailPresenter {
 
   disabledAgencyControl() {
     this.agenciesDetailForm.controls['agencyControl'].disable();
+  }
+
+  disabledLatControl() {
+    this.agenciesDetailForm.controls['latControl'].disable();
+  }
+
+  disabledLonControl() {
+    this.agenciesDetailForm.controls['lonControl'].disable();
   }
 
 

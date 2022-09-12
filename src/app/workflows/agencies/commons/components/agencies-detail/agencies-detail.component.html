@@ -78,7 +78,6 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
                             <bcp-text-box
                                 name="lat"
-                                [type]="eTypeTextbox.ONLY_DECIMAL"
                                 label="Latitud"
                                 [maxlength]="'20'"
                                 [placeholder]="''"
@@ -91,7 +90,6 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
                             <bcp-text-box
                                 name="lon"
-                                [type]="eTypeTextbox.ONLY_DECIMAL"
                                 label="Longitud"
                                 [maxlength]="'20'"
                                 [placeholder]="''"
@@ -101,7 +99,7 @@
                         </div>
                     </div>
 
-                    <div class="row cls-row-detail">
+                    <!-- <div class="row cls-row-detail">
                         <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail">                                
                             <google-map [center]="agency.agencyMap.agencyMapPosition">
                                 <map-marker
@@ -112,7 +110,18 @@
                                 </map-marker>
                             </google-map>
                         </div>
+                    </div> -->
+
+                    <div class="row cls-row-detail">
+                        <div class="col-lg-12 col-md-12 col-sm-12 div-lbl-field-detail"> 
+                            <div>
+                                <img class="sb-title-icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/location_pin/v5/24px.svg" alt="">
+                            </div>   
+                            <input #inputPlaces id="inputPlaces" class="autocompleteMapa" type="text" />                            
+                            <div class="mapa" id="divMap" #divMap></div>
+                        </div>
                     </div>
+
 
                     
                     <div class="row cls-row-detail mb-4" style="text-align: center;">

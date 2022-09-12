@@ -6,7 +6,7 @@ import { ElementRef, HostListener, Directive, Input } from '@angular/core';
 export class OnlydecimalDirective {
 
   @Input() decimalOnlyActive = true;
-  private regex: RegExp = new RegExp(/^\d*\.?\d{0,2}$/g);
+  private regex: RegExp = new RegExp(/[-+]?^\d*\.?\d{0,2}$/g);
   private specialKeys: Array<string> = [
     'Backspace',
     'Tab',
@@ -47,7 +47,7 @@ export class OnlydecimalDirective {
   @HostListener('input', ['$event']) onInput(event: KeyboardEvent) {
     if (this.decimalOnlyActive) {
       const initalValue = this.el.nativeElement.value;
-      this.el.nativeElement.value = initalValue.replace(/[^0-9.\s]*/g, '');
+      this.el.nativeElement.value = initalValue.replace(/[-+]?[^0-9.\s]*/g, '');
       if (initalValue !== this.el.nativeElement.value) {
         event.stopPropagation();
       }

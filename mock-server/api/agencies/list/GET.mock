@@ -10,8 +10,8 @@ Content-Type: application/json; charset=utf-8
         "provincia": "Lima",
         "departamento": "Lima",
         "direccion": "Las Flores de Primavera 1487",
-        "lat": -77.01232817,
-        "lon": -12.0046896
+        "lat": -12.004235241910159,
+        "lon": -77.01213626051613
       },
       {
         "agencyId": 2,
@@ -20,8 +20,8 @@ Content-Type: application/json; charset=utf-8
         "provincia": "Maynas",
         "departamento": "Loreto",
         "direccion": "Av. La Marina N° 944",
-        "lat": -73.240647,
-        "lon": -3.731367
+        "lat": -3.7311387875963598,
+        "lon": -73.24041021824469
       },
       {
         "agencyId": 3,
@@ -30,8 +30,8 @@ Content-Type: application/json; charset=utf-8
         "provincia": "Lima",
         "departamento": "Lima",
         "direccion": "Av. Conquistadores 968",
-        "lat": -77.03735314,
-        "lon": -12.10568371
+        "lat": -12.105909515928593,
+        "lon": -77.03741141818686
       },
       {
         "agencyId": 4,
@@ -40,8 +40,8 @@ Content-Type: application/json; charset=utf-8
         "provincia": "Lima",
         "departamento": "Lima",
         "direccion": "Av. Salvador Allende 468 – Villa María del Triunfo",
-        "lat": -76.957646,
-        "lon": -12.158153
+        "lat": -12.157914922033136,
+        "lon": -76.95763213167858
       },
       {
         "agencyId": 5,
@@ -49,9 +49,19 @@ Content-Type: application/json; charset=utf-8
         "distrito": "Arequipa",
         "provincia": "Arequipa",
         "departamento": "Arequipa",
-        "direccion": "Av. Salvador Allende 468 – Villa María del Triunfo",
-        "lat": -76.957646,
-        "lon": -12.158153
+        "direccion": "Av. Siglo XX 219",
+        "lat": -16.400696019904245,
+        "lon": -71.52892790279026
+      },
+      {
+        "agencyId": 6,
+        "agencia": "Agencia Piura",
+        "distrito": "Piura",
+        "provincia": "Piura",
+        "departamento": "Piura",
+        "direccion": "Av. Grau 133",
+        "lat": -5.194587887639063,
+        "lon": -80.62687151814721
       }
   ],
   "errorManager": {
